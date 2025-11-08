@@ -12,10 +12,11 @@ async function bootstrap() {
 
   // Enable CORS for frontend
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000'], // allow browser frontend
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true,
   });
+
 
   const config = new DocumentBuilder()
     .setTitle('Menu API')
